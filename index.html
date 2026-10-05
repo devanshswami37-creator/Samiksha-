@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Samiksha ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family: Georgia, "Times New Roman", serif;
+  background:linear-gradient(135deg,#180914,#3b1025,#160711);
+  color:#fff7fa; overflow-x:hidden;
+}
+canvas{position:fixed;inset:0;pointer-events:none;z-index:0}
+section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:55px 20px;position:relative;z-index:1}
+.card{
+  width:min(760px,94vw); padding:42px 28px; border-radius:28px;
+  background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 25px 80px rgba(0,0,0,.45); backdrop-filter:blur(12px);
+  text-align:center;
+}
+.kicker{letter-spacing:4px;text-transform:uppercase;color:#ffb8cc;font-size:12px;margin-bottom:18px}
+h1{font-size:clamp(45px,11vw,88px);line-height:.95;margin-bottom:22px}
+h2{font-size:clamp(30px,7vw,52px);margin-bottom:20px}
+p{font-family:Arial,sans-serif;font-size:18px;line-height:1.75;color:#ffe9ef}
+.heart{font-size:70px;animation:pulse 1.5s infinite;margin:18px 0}
+@keyframes pulse{50%{transform:scale(1.18)}}
+button,.btn{
+  border:0; border-radius:999px; padding:15px 25px; margin:22px 7px 0;
+  background:#ff6f9b;color:white;font-weight:bold;font-size:16px;cursor:pointer;
+  box-shadow:0 8px 25px rgba(255,111,155,.25); transition:.25s;
+}
+button:hover,.btn:hover{transform:translateY(-3px) scale(1.03)}
+.secondary{background:rgba(255,255,255,.12)}
+.reveal{display:none;margin-top:28px}
+.reveal.show{display:block;animation:fade .7s}
+@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.promise{display:grid;gap:12px;margin:25px 0;text-align:left}
+.promise div{padding:15px 18px;border-radius:16px;background:rgba(255,255,255,.07);font-family:Arial,sans-serif}
+.photos{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:25px}
+.photo{
+  min-height:170px;border-radius:18px;border:1px dashed rgba(255,255,255,.3);
+  display:flex;align-items:center;justify-content:center;color:#ffc6d5;
+  background:rgba(255,255,255,.05);font-family:Arial,sans-serif;
+}
+.photo img{width:100%;height:100%;object-fit:cover;border-radius:18px}
+.small{font-size:14px;color:#ffc6d5;font-family:Arial,sans-serif;margin-top:20px}
+.signature{margin-top:30px;font-size:24px}
+#finalMessage{display:none}
+#finalMessage.show{display:block;animation:fade .8s}
+footer{position:relative;z-index:1;text-align:center;padding:25px;color:#dba9b8;font:13px Arial,sans-serif}
+@media(max-width:600px){.photos{grid-template-columns:1fr}.photo{height:390px}.card{padding:34px 20px}p{font-size:16px}}
+</style>
+</head>
+<body>
+<canvas id="hearts"></canvas>
+
+<section id="start">
+  <div class="card">
+    <div class="kicker">A little something from me to you</div>
+    <h1>Samiksha ❤️</h1>
+    <div class="heart">❤️</div>
+    <p>I made this because sometimes saying sorry isn't enough. I wanted you to know what's actually in my heart.</p>
+    <button onclick="go('sorry')">Open this for me 🥺</button>
+  </div>
+</section>
+
+<section id="sorry">
+  <div class="card">
+    <div class="kicker">From me, to you</div>
+    <h2>Samiksha, I'm sorry. ❤️</h2>
+    <p class="small">I made this little corner of the internet just for us.</p>
+    <div style="height:14px"></div>
+    <div class="kicker">I'm genuinely sorry</div>
+    <h2>About last night…</h2>
+    <p>
+      I know last night wasn't okay, and I'm genuinely sorry.
+      I'm sorry for my anger, for my mistake, and especially for the misunderstanding between us.
+    </p>
+    <br>
+    <p>
+      I know that being angry doesn't make it okay to hurt you or make you feel bad.
+      You deserve patience, understanding and love from me — not a version of me that reacts without thinking.
+    </p>
+    <button onclick="show('more')">There's something else I want you to know ❤️</button>
+    <div id="more" class="reveal">
+      <p>
+        You mean much more to me than any argument or misunderstanding ever could.
+        I don't want one bad night to become bigger than everything beautiful we've shared.
+      </p>
+      <br>
+      <p>
+        And I don't want my apology to be just words. I want to actually work on my anger,
+        listen better, understand you before reacting, and become a better partner for you.
+      </p>
+      <button onclick="go('promise')">One promise from me →</button>
+    </div>
+  </div>
+</section>
+
+<section id="promise">
+  <div class="card">
+    <div class="kicker">Not just promises — things I want to work on</div>
+    <h2>For us ❤️</h2>
+    <div class="promise">
+      <div>🤍 I will try to control my anger instead of letting it control me.</div>
+      <div>👂 I will listen to understand you, not just to reply.</div>
+      <div>🫶 I will communicate instead of turning misunderstandings into fights.</div>
+      <div>🌱 I will work on myself instead of expecting you to adjust to my mistakes.</div>
+      <div>❤️ I will never let one difficult moment make me forget how much you mean to me.</div>
+    </div>
+    <button onclick="go('memories')">Our little memories 📸</button>
+  </div>
+</section>
+
+<section id="memories">
+  <div class="card">
+    <div class="kicker">Replace these with your photos</div>
+    <h2>Us, in little moments ❤️</h2>
+    <p>I've left four spaces for our favourite pictures. Add your photos to make this page truly ours.</p>
+    <div class="photos">
+      <div class="photo"><img src="memory1.jpeg" alt="A beach memory"></div>
+      <div class="photo"><img src="memory2.jpeg" alt="A close moment together"></div>
+      <div class="photo"><img src="memory3.jpeg" alt="A beautiful memory together"></div>
+      <div class="photo"><img src="memory4.jpeg" alt="A funny memory together"></div>
+      <div class="photo"><img src="memory5.jpeg" alt="A beach memory together"></div>
+      <div class="photo"><img src="memory6.jpeg" alt="A sweet memory together"></div>
+    </div>
+    <p class="small">Six little reminders that there is so much more to us than one difficult night. ❤️</p>
+    <button onclick="go('final')">One last thing…</button>
+  </div>
+</section>
+
+<section id="final">
+  <div class="card">
+    <div class="kicker">Please read this slowly</div>
+    <h2>Samiksha, I'm sorry. ❤️</h2>
+    <p>
+      I don't expect you to instantly forget what happened.
+      I just want you to know that I understand where I went wrong,
+      I regret hurting you, and I genuinely want to make things better.
+    </p>
+    <br>
+    <p>
+      I love you. And I'm choosing you — not just when things are easy,
+      but especially when things are difficult.
+    </p>
+    <button onclick="forgive()">Can we make things better together? 🥺</button>
+    <button class="secondary" onclick="show('finalMessage')">I need a little time</button>
+
+    <div id="finalMessage" class="reveal">
+      <p>Take all the time you need. ❤️</p>
+      <p class="small">My apology doesn't come with pressure. I just wanted you to know how I feel.</p>
+    </div>
+    <div id="forgiven" class="reveal">
+      <div class="heart">💗</div>
+      <h2>Thank you, my love.</h2>
+      <p>Whatever happens next, I'll keep working on becoming someone who makes you feel safe, loved and understood.</p>
+      <div class="signature">— Your idiot who loves you ❤️</div>
+    </div>
+  </div>
+</section>
+
+<footer>Made with love, especially for Samiksha ❤️</footer>
+
+<script>
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+function show(id){document.getElementById(id).classList.add('show')}
+function forgive(){show('forgiven'); burst()}
+const canvas=document.getElementById('hearts'),ctx=canvas.getContext('2d');
+let W,H,particles=[];
+function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight}
+addEventListener('resize',resize);resize();
+function burst(){
+  for(let i=0;i<55;i++) particles.push({x:W/2,y:H/2,vx:(Math.random()-.5)*7,vy:-Math.random()*7-2,a:1,s:Math.random()*18+8});
+}
+function draw(){
+ ctx.clearRect(0,0,W,H);
+ particles.forEach((p,i)=>{
+   p.x+=p.vx;p.y+=p.vy;p.vy+=.08;p.a-=.012;
+   ctx.globalAlpha=Math.max(0,p.a);ctx.font=p.s+'px serif';ctx.fillText('♥',p.x,p.y);
+   if(p.a<=0)particles.splice(i,1);
+ });
+ ctx.globalAlpha=1;requestAnimationFrame(draw);
+}
+draw();
+</script>
+</body>
+</html>
